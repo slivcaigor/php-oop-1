@@ -44,17 +44,23 @@ class Movie
 
 $movie1 = new Movie("The Shawshank Redemption", "Frank Darabont", 1994, 8.5, ["Drama", "Crime"]);
 $movie2 = new Movie("The Godfather", "Francis Ford Coppola", 1972, 10, ["Crime", "Drama"]);
+$movie3 = new Movie("The Dark Knight", "Christopher Nolan", 2008, 9, ["Action", "Crime", "Drama"]);
+$movie4 = new Movie("Pulp Fiction", "Quentin Tarantino", 1994, 8.9, ["Crime", "Drama"]);
+$movie5 = new Movie("The Lord of the Rings: The Return of the King", "Peter Jackson", 2003, 9, ["Adventure", "Fantasy"]);
+$movie6 = new Movie("The Good, the Bad and the Ugly", "Sergio Leone", 1966, 8.8, ["Western"]);
+$movie7 = new Movie("Forrest Gump", "Robert Zemeckis", 1994, 8.8, ["Drama", "Romance"]);
+$movie8 = new Movie("Inception", "Christopher Nolan", 2010, 8.8, ["Action", "Adventure", "Sci-Fi"]);
+$movie9 = new Movie("The Matrix", "The Wachowski Brothers", 1999, 8.7, ["Action", "Sci-Fi"]);
+$movie10 = new Movie("Goodfellas", "Martin Scorsese", 1990, 8.7, ["Crime", "Drama"]);
 
-echo "<h2>Title: " . $movie1->getTitle() . "</h2>";
-echo "<h3>Director: " . $movie1->getDirector() . "</h3>";
-echo "<h3>Release Year: " . $movie1->getReleaseYear() . "</h3>";
-echo "<h3>Rating: " . $movie1->getRating() . "</h3>";
-echo "<h3>Genre: " . $movie1->getGenres() . "</h3>";
+$movies = [$movie1, $movie2, $movie3, $movie4, $movie5, $movie6, $movie7, $movie8, $movie9, $movie10];
 
-echo "<br>";
-
-echo "<h2>Title: " . $movie2->getTitle() . "</h2>";
-echo "<h3>Director: " . $movie2->getDirector() . "</h3>";
-echo "<h3>Release Year: " . $movie2->getReleaseYear() . "</h3>";
-echo "<h3>Rating: " . $movie2->getRating() . "</h3>";
-echo "<h3>Genre: " . $movie2->getGenres() . "</h3>";
+foreach ($movies as $movie) {
+    echo "<h2>Title: " . $movie->getTitle() . "</h2>";
+    echo "<h3>Director: " . $movie->getDirector() . "</h3>";
+    echo "<h3>Release Year: " . $movie->getReleaseYear() . "</h3>";
+    echo "<h3>Rating: " . $movie->getRating() . "</h3>";
+    echo "<h3>Genre: " . $movie->getGenres() . "</h3>";
+    echo "<br>";
+}
+?>
