@@ -17,4 +17,27 @@ class Movie
         $this->genres = $genres;
     }
 
+    public function getTitle(): string
+    {
+        return $this->title;
+    }
+
+    public function getDirector(): string
+    {
+        return $this->director;
+    }
+
+    public function getReleaseYear(): string
+    {
+        return $this->releaseYear;
+    }
+
+    public function getRating(): string
+    {
+        return $this->rating;
+    }
+    public function getGenres(): string
+    {
+        return implode(', ', $this->genres);
+    }
 }
